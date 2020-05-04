@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2020 at 11:11 AM
+-- Generation Time: May 04, 2020 at 12:12 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -58,6 +58,25 @@ INSERT INTO `apparel` (`id`, `gambar`, `jenis`, `nama`, `brand`, `bahan`, `ukura
 (22, '11.jpg', 'Jacket', 'WOODY WBJ RYL BLU-DRK BRW', 'Sch.', 'Taslan', 'S, M, L, XL', '-a<br>\r\n-b<br>\r\n-c', 500000),
 (28, '12.jpg', 'T-shirt', 'Helliant', 'Screamous', 'Katun', 'S, M', 'Regular Cutting<br>\r\nPlastisol Printing Ink<br>\r\nCotton Combed 30?s Material<br>\r\nDo Not iron on Print<br><br>\r\nKaos lengan pendek dengan bahan Katun dan Sablon Plastisol, Nyaman untuk penggunaan sehari-hari.', 140000);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(64) NOT NULL,
+  `password` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`) VALUES
+(2, 'rizky', '$2y$10$u1opqD5MtBLIkmtn4ZSInOlz51eQj4RSWwYmUnLvMt8HyehsfRfaS');
+
 --
 -- Indexes for dumped tables
 --
@@ -69,6 +88,12 @@ ALTER TABLE `apparel`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -77,6 +102,12 @@ ALTER TABLE `apparel`
 --
 ALTER TABLE `apparel`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
